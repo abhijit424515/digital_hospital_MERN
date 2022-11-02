@@ -11,12 +11,15 @@ const patientSchema = mongoose.Schema({
     guardianMobileNumber: Number,
     guardianEmail: String,
     
-    previousAilments: [String],
-    currentStatus: String,
-    doctorPrescription: String,
-    medicinesPrescribed: [{
-      name: String,
-      id: String
+    healthStatus: String,
+    medicalHistory: [{
+      prescription: String,
+      medicinesPrescribed: [{
+        name: String,
+        id: String,
+        quantity: Number,
+      }],
+      timeStamp: { type : Date, default: Date.now }
     }]
 });
 
