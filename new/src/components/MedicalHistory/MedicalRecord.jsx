@@ -10,13 +10,12 @@ export default function MedicalRecord(props) {
           {
             // console.log(props.medicinesPrescribed[0])
             props.medicinesPrescribed.map((x) => {
-              toString(
-                x.name +
-                ": " +
-                toString(x.quantity) +
-                ", "
+              return(
+                  x.name +
+                  ": " +
+                  x.quantity +
+                  ", "
               )
-              // console.log(x.name)
             })
         }
         </td>
