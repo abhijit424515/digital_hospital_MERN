@@ -1,9 +1,15 @@
 import React from 'react'
+import "../styles/Button.css"
 
 export default function Button(props) {
   return (
     <>
-    <button type="button" className='bg-red-900 rounded-md h-10 my-auto px-2'>{props.text}</button>
+    <button 
+      type="button" 
+      className={'btn' + ' ' + props.bgColor + ' hover:' + props.hoverColor} 
+    >
+      {props.text}
+    </button>
     </>
   )
 }
