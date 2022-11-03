@@ -1,13 +1,11 @@
 import React from "react";
 import data from "./PatientData";
 import "../../styles/PatientInfo.css";
-import Navbar from '../Navbar'
 
 export default function PatientInfo(props) {
 
     return (
         <div className="patientdet">
-            {props.display}
             <div className="im">
                 <img src={data.img} alt="profile" />
             </div>
