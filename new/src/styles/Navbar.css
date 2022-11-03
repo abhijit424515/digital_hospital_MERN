@@ -1,3 +1,7 @@
+.navb {
+    height: 20vh;
+}
+
 .al {
     display: flex;
     justify-content: space-between;
@@ -6,6 +10,7 @@
 }
 
 .btn {
+    margin-right: 6px !important;
     width: 7em !important; 
     height: 4.5em;
 }

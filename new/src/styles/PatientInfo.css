@@ -1,0 +1,36 @@
+.patientdet {
+    height: 100vh;
+    width: 100vw;
+}
+
+.im {
+    height: 40%;
+    width: 100% !important;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+}
+
+.name,
+.job,
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+}
+
+img {
+    height: 100% !important;
+}
