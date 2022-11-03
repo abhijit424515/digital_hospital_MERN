@@ -1,15 +1,24 @@
 import DisplayArea from "./components/DisplayArea"
 import Button from "./components/Button"
 import Navbar from "./components/Navbar"
+import PatientInfo from "./components/PatientInfo/PatientInfo"
+import Login from "./components/Login/Login"
+import Home from "./components/Home/Home"
+
+import {
+   BrowserRouter as Router,
+   Routes,
+   Route,
+ } from "react-router-dom";
 
 export default function App() {
+
    return (
-   <div className="h-auto">
-      {/* <DisplayArea cl={"bg-blue-300 h-[15vh] p-[1rem] flex justify-evenly"} buttons={[]}/> */}
-      <Navbar />
-      {/* <button type="button" class="btn btn-warning c1 c" onClick = {(e) => null}>Vaccinations list</button> */}
-      {/* <Button text={'Button'} bgColor={'bg-yellow-500'} hoverColor={'bg-purple-500'} /> */}
-      <DisplayArea cl={"bg-blue-300 h-[15vh] p-[1rem] flex justify-evenly"} />
-   </div>
-   )
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/medical" element={<Home />} />
+         </Routes>
+      </Router>    
+   );
 }

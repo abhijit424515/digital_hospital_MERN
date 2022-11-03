@@ -3,7 +3,7 @@ import "../styles/Navbar.css"
 
 export default function Navbar() {
   return (
-    <div>
+    <div className='navb'>
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <div class = "al">
