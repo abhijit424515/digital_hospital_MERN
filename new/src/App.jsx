@@ -3,7 +3,7 @@ import Button from "./components/Button"
 import Navbar from "./components/Navbar"
 import PatientInfo from "./components/PatientInfo/PatientInfo"
 import Login from "./components/Login/Login"
-import Home from "./components/Home/Home"
+import Home from "./components/Pages/Home"
 
 import {
     BrowserRouter as Router,
