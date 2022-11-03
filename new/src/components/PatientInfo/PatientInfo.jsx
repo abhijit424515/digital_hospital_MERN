@@ -1,25 +1,27 @@
 import React from "react";
 import data from "./PatientData";
 import "../../styles/PatientInfo.css";
+import Navbar from '../Navbar'
 
-export default function PatientInfo() {
+export default function PatientInfo(props) {
 
-  return (
-    <div className="patientdet">
-        <div className="im">
-            <img src={data.img} alt="profile" />
+    return (
+        <div className="patientdet">
+            {props.display}
+            <div className="im">
+                <img src={data.img} alt="profile" />
+            </div>
+            <div className="container">
+                <div className="name">
+                    <h1>{data.name}</h1>
+                </div>
+                <div className="job">
+                    <h1>{data.job}</h1>
+                </div>
+                <div className="student">
+                    <h1>{data.age}</h1>
+                </div>
+            </div>
         </div>
-        <div className="container">
-            <div className="name">
-                <h1>{data.name}</h1>
-            </div>
-            <div className="job">
-                <h1>{data.job}</h1>
-            </div>
-            <div className="student">
-                <h1>{data.age}</h1>
-            </div>
-        </div>
-    </div>
-  );
+    );
 }
