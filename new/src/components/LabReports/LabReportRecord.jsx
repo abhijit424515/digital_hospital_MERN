@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function MedicalRecord(props) {
+export default function LabReportRecord(props) {
   // console.log(props)
   return (
     <>

@@ -1,9 +1,10 @@
 import React from 'react'
+import MedicalHistory from "../MedicalHistory/MedicalHistory"
 
 export default function MedicalBook() {
     return (
         <>
-            Hello 1
+            <MedicalHistory />
         </>
     )
 }

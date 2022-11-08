@@ -1,14 +1,14 @@
 import React from "react";
-import data from "./MedicalData";
-import MedicalRecord from "./MedicalRecord";
+import data from "./LabReportData";
+import LabReportRecord from "./LabReportRecord";
 
 function fun(entry) {
     return (
-        <MedicalRecord key={entry.id} prescription={entry.prescription} medicinesPrescribed={entry.medicinesPrescribed} />
+        <LabReportRecord key={entry.id} prescription={entry.prescription} medicinesPrescribed={entry.medicinesPrescribed} />
     )
 }
 
-export default function MedicalHistory() {
+export default function LabReportHistory() {
 //   console.log(data);
 
 //   {data.map((entry) => {
