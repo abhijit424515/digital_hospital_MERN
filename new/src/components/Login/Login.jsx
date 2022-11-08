@@ -1,35 +1,61 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, 
     Link,
-    // useHistory
+    useNavigate
    } from 'react-router-dom'
+import axios from 'axios';
+
 import "../../styles/Login.css";
 
-export default function Login() {
+let domain = "";
 
-  const [style, setStyle] = useState('')
+export default function Login(props) {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [password2, setPassword2] = useState('')
   const [username, setUsername] = useState('')
 
-  const signupprocess = (data) => {
-  }
-
-  const signinprocess = (data, hist) => {
-  }
-
   const Login = (e) => {
     e.preventDefault();
+
+    axios.post(domain + 'auth/login/', {
+      email: email,
+      password: password,
+    })
+      .then((res) => {
+        console.log(res.data)
+        navigate('/medical')
+      })
+      .catch((err) => {
+        console.log(err)
+        navigate('/medical')     
+      });
   }
 
   const Signup = (e) => {
     e.preventDefault();
+
+    axios.post(domain + 'auth/getotp/', {
+        email: email,
+      })
+        .then((res) => {
+          console.log(res.data)
+          props.setdisplay("OTP")
+          props.setStyle("sign-up-mode")
+        })
+        .catch((err) => {
+          console.log(err)
+          props.setdisplay("OTP")
+          props.setStyle("")
+        });
+
   }
 
 
   return (
-    <div id="container" className={style}>
+    <div id="container" className={props.style}>
       <div class="frms-container">
         <div class="signin-signup">
           <frm action="" class="sign-in-frm">
@@ -42,11 +68,7 @@ export default function Login() {
               <i class="fas fa-lock" aria-hidden='true'></i>
               <input id='loginpwd' type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
             </div>
-            {/* <Router> */}
-              {/* <Link to="/"> */}
-                <input type="submit" value="Login" class="butn solid" onClick={Login} />
-              {/* </Link> */}
-            {/* </Router> */}
+            <input type="submit" value="Login" class="butn solid" onClick={Login} />
           </frm>
           <frm action="" class="sign-up-frm">
             <h2 class="title">Sign up</h2>
@@ -76,7 +98,7 @@ export default function Login() {
           <div class="content">
             <h3>New here ?</h3>
             <button class="butn " id="sign-up-butn" onClick={() => {
-              setStyle('sign-up-mode')
+              props.setStyle('sign-up-mode')
             }}>
               Sign up
             </button>
@@ -86,7 +108,7 @@ export default function Login() {
           <div class="content">
             <h3>One of us ?</h3>
             <button class="butn " id="sign-in-butn" onClick={() => {
-              setStyle('')
+              props.setStyle('')
             }}>
               Sign in
             </button>
