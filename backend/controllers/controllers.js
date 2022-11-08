@@ -1,5 +1,5 @@
-const asyncHandler = require("express-async-handler");
-const PATIENT = require("../models/patient");
+import asyncHandler from "express-async-handler";
+import PATIENT from "../models/patient.js";
 
 // GET request
 // STATUS: DONE
@@ -56,7 +56,7 @@ const delReq = asyncHandler(async (req, res) => {
   res.status(200).json(patients);
 });
 
-module.exports = {
+export  {
   SEARCH,
   postReq,
   putReq,

@@ -1,6 +1,7 @@
-const mongoose = require("mongoose");
+import pkg from 'mongoose';
+const { Schema, model } = pkg;
 
-const patientSchema = mongoose.Schema({
+const patientSchema = Schema({
     name: String,
     rollNo: String,
     department: String,
@@ -9,8 +10,7 @@ const patientSchema = mongoose.Schema({
     email: String,
     guardian: String,
     guardianMobileNumber: Number,
-    guardianEmail: String,
-    
+    guardianEmail: String,  
     healthStatus: String,
     medicalHistory: [{
       prescription: String,
@@ -22,5 +22,5 @@ const patientSchema = mongoose.Schema({
       timeStamp: { type : Date, default: Date.now }
     }]
 });
-
-module.exports = mongoose.model("Patient",patientSchema)
+let PATIENT = await model("Patient",patientSchema)
+export default PATIENT

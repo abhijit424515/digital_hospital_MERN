@@ -1,13 +1,12 @@
-const express = require("express");
-const router = express.Router();
-const {
-  SEARCH,
-  postReq,
-  putReq,
-  delReq,
-} = require("../controllers/controllers");
+import { Router } from "express";
+const router = Router();
+import { SEARCH, postReq, putReq, delReq } from "../controllers/controllers.js";
+import { signupSendOtp, signupVerifyOtp } from "../controllers/signup.js"
+
 
 // HTTP requests
+router.route("/auth/signup/sendotp").post(signupSendOtp)
+router.route("/auth/signup/verifyotp").post(signupVerifyOtp)
 router.route("/").get(SEARCH).post(postReq).put(putReq).delete(delReq);
 
-module.exports = router;
+export default router;
