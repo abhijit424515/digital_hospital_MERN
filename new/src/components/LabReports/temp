@@ -1,2 +1,0 @@
-
-        <td>{props.timeStamp.toString()}</td>

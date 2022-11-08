@@ -12,7 +12,7 @@ import DoctorsAppointment from './DoctorsAppointment'
 import Reimburse from './Reimburse'
 import Admin from './Admin'
 
-import data from "../PatientInfo/PatientData";
+import data from "./data/PatientInfo/PatientData";
 import "../../styles/PatientInfo.css";
 
 export default function Home() {
@@ -37,20 +37,22 @@ export default function Home() {
         );
     }
 
-    const [page, changePage] = useState("Student Information")
+    const [display, changeDisplay] = useState("Student Information")
     return (
         <div>
-            <Navbar changeState={changePage} />
-            {page == "Medical Book" && <MedicalBook />}
-            {page == "Doctor's Visit" && <DoctorsVisit />}
-            {page == "Pharmacy" && <Pharmacy />}
-            {page == "Lab Order" && <LabOrder />}
-            {page == "Reports" && <Reports />}
-            {page == "Doctor's Availability" && <DoctorsAvailability />}
-            {page == "Doctor's Appoinment" && <DoctorsAppointment />}
-            {page == "Student Information" && <StudentInformation />}
-            {page == "Reimburse" && <Reimburse />}
-            {page == "Admin" && <Admin />}
+            <Navbar changeState={changeDisplay} />
+            <div className='m-5 dark'>
+                {display == "Medical Book" && <MedicalBook />}
+                {display == "Doctor's Visit" && <DoctorsVisit />}
+                {display == "Pharmacy" && <Pharmacy />}
+                {display == "Lab Order" && <LabOrder />}
+                {display == "Reports" && <Reports />}
+                {display == "Doctor's Availability" && <DoctorsAvailability />}
+                {display == "Doctor's Appoinment" && <DoctorsAppointment />}
+                {display == "Student Information" && <StudentInformation />}
+                {display == "Reimburse" && <Reimburse />}
+                {display == "Admin" && <Admin />}
+            </div>
         </div>
     )
 }

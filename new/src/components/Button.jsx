@@ -6,7 +6,8 @@ export default function Button(props) {
     <>
     <button 
       type="button" 
-      className={'btn' + ' ' + props.bgColor + ' hover:' + props.hoverColor} 
+      className={'btn' + ' ' + props.tw} 
+      onClick={props.click}
     >
       {props.text}
     </button>

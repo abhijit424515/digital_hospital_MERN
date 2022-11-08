@@ -1,20 +1,24 @@
 const data = [
     {   
-
-        id :1,
-        prescription : "abc",
-        medicinesPrescribed : [
+        "ID" :1,
+        "Prescription" : "abc",
+        "Medicines Prescribed" : [
             {
                 name: "Paracetamol",
                 id: "123",
                 quantity: 500
+            },
+            {
+                name: "Combiflavin",
+                id: "125",
+                quantity: 200
             }
         ]
     },
     {   
-        id :2,
-        prescription : "abcd",
-        medicinesPrescribed : [
+        "ID" :2,
+        "Prescription" : "abcd",
+        "Medicines Prescribed" : [
             {
                 name: "Paracetamol 50",
                 id: "1234",
