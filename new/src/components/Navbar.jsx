@@ -2,7 +2,7 @@ import React from 'react'
 // import "../styles/Navbar.css"
 import Button from './Button'
 
-const nav_headers = ["Student Information", "Medical Book", "Doctor's Visit", "Pharmacy", "Lab Order", "Reports", "Doctor's Availability", "Doctor's Appoinment", "Reimburse", "Admin"]
+const nav_headers = ["🏠 Home", "Medical Book", "Doctor's Visit", "Pharmacy", "Lab Order", "Reports", "Doctor's Availability", "Doctor's Appoinment", "Reimburse"]
 
 export default function Navbar(props) {
 

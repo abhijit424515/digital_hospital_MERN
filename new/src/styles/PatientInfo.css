@@ -1,15 +1,16 @@
-.patientdet {
-    height: 80vh;
-    width: 100vw;
-}
+/* .patientdet { */
+    /* height: 80vh; */
+    /* width: 100vw; */
+/* } */
 
-.im {
-    height: 40%;
-    width: 100% !important;
+.profileImage {
+    border-radius: 50%;
+    height: 50vh;
+    width: 50vh;
+    object-position: center;
+    overflow: hidden;
     object-fit: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 50%;
 }
 
 .container {
@@ -31,6 +32,6 @@
     width: 100%;
 }
 
-img {
+/* img {
     height: 100% !important;
-}
+} */
