@@ -1,0 +1,40 @@
+[
+    {
+        "_id": 1,
+        "name": "A",
+        "specialization": "dsgar",
+        "schedule": [
+            {
+                "day": "Monday",
+                "start": "9:00",
+                "end": "12:00",
+                "appointments": [
+                    "a1",
+                    "a2"
+                ]
+            }
+        ],
+        "mobileNumber": 1000000000,
+        "email": "dsav@dav.com",
+        "localTelNo": 8901324
+    },
+    {
+        "_id": 2,
+        "name": "B",
+        "specialization": "fgrar",
+        "schedule": [
+            {
+                "day": "Tuesday",
+                "start": "14:00",
+                "end": "17:00",
+                "appointments": [
+                    "a3",
+                    "a4"
+                ]
+            }
+        ],
+        "mobileNumber": 2000000000,
+        "email": "dsv@sdzv.com",
+        "localTelNo": 8901325
+    }
+]

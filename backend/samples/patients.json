@@ -1,0 +1,48 @@
+[
+    {
+        "name": "A",
+        "rollNo": "A21",
+        "department": "CSE",
+        "courses": [
+            "AB",
+            "CD"
+        ],
+        "mobileNumber": 8323328973,
+        "email": "a@b.c",
+        "guardian": "saf",
+        "guardianMobileNumber": 8946654848,
+        "guardianEmail": "d@e.f",
+        "healthStatus": "ded",
+        "medicalHistory": [
+            "a",
+            "b"
+        ],
+        "appointments": [
+            "a1",
+            "a2"
+        ]
+    },
+    {
+        "name": "B",
+        "rollNo": "A23",
+        "department": "CSE",
+        "courses": [
+            "ABCD",
+            "CD"
+        ],
+        "mobileNumber": 8323328873,
+        "email": "aa@b.c",
+        "guardian": "sbf",
+        "guardianMobileNumber": 8946754848,
+        "guardianEmail": "das@e.f",
+        "healthStatus": "alive",
+        "medicalHistory": [
+            "avb",
+            "bscc"
+        ],
+        "appointments": [
+            "a3",
+            "a4"
+        ]
+    }
+]

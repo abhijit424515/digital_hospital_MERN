@@ -10,16 +10,21 @@ const patientSchema = mongoose.Schema({
     guardian: String,
     guardianMobileNumber: Number,
     guardianEmail: String,
-    
     healthStatus: String,
     medicalHistory: [{
-      prescription: String,
-      medicinesPrescribed: [{
-        name: String,
-        id: String,
-        quantity: Number,
-      }],
-      timeStamp: { type : Date, default: Date.now }
+    //   prescription: String,
+    //   medicinesPrescribed: [{
+    //     name: String,
+    //     id: String,
+    //     quantity: Number,
+    //   }],
+    //   timeStamp: { type : Date, default: Date.now }
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "medicalRecords",
+    }],
+    appointments: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Appointment",
     }]
 });
 
