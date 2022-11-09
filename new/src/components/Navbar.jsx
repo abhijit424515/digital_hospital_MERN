@@ -5,6 +5,9 @@ import Button from './Button'
 const nav_headers = ["Student Information", "Medical Book", "Doctor's Visit", "Pharmacy", "Lab Order", "Reports", "Doctor's Availability", "Doctor's Appoinment", "Reimburse", "Admin"]
 
 export default function Navbar(props) {
+
+    console.log(props);
+    
     return (
         <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid">

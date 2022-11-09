@@ -1,6 +1,5 @@
-const mongoose = require("mongoose");
-
-const doctorSchema = mongoose.Schema({
+import { Schema, model } from "mongoose";
+const doctorSchema = Schema({
     name: String,
     specialization: String,
     schedule: [{
@@ -17,4 +16,4 @@ const doctorSchema = mongoose.Schema({
     localTelNo: Number,
 });
 
-module.exports = mongoose.model("Doctor",doctorSchema)
+export default model("Doctor",doctorSchema)
