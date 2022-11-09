@@ -1,5 +1,6 @@
 import React from 'react'
 import "../styles/Button.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Button(props) {
   return (
@@ -9,7 +10,8 @@ export default function Button(props) {
       className={'btn' + ' ' + props.tw} 
       onClick={props.click}
     >
-      {props.text}
+        <FontAwesomeIcon icon={props.fai} />
+        {" " + props.text}
     </button>
     </>
   )
