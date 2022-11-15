@@ -1,37 +1,7 @@
-/* .patientdet { */
-    /* height: 80vh; */
-    /* width: 100vw; */
-/* } */
-
 .profileImage {
-    border-radius: 50%;
-    height: 50vh;
-    width: 50vh;
-    object-position: center;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 50%;
 }
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 60%;
-    width: 100%;
-}
-
-.name,
-.job,
-.status {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10%;
-    width: 100%;
-}
-
-/* img {
-    height: 100% !important;
-} */

@@ -20,7 +20,7 @@ export default function Navbar(props) {
         <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid">
                 {nav_headers.map((item) => (
-                    <Button key={item} fai={item[0]} tw={"h-[4rem] m-1 bg-sky-500 hover:bg-sky-700"} text={item[1]} click={() => { props.changeState(item[1])}} />
+                    <Button key={item} fai={item[0]} tw={"h-[4rem] m-1 bg-sky-500 hover:bg-sky-700 nav-item"} text={item[1]} click={() => { props.changeState(item[1])}} />
                 ))}
             </div>
         </nav>
