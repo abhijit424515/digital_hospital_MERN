@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import Table from "../Table";
+import data from "./data/Pharmacydata";
+import PopupButton from "../PopupButton";
 
 export default function Pharmacy() {
+    let headers = Object.keys(data[0]);
+    let new_data = [...data];
+    for(let i=0; i<new_data.length; i++){
+        new_data[i] = [new_data[i]["ID"], new_data[i]["Date of Order"], new_data[i]["Name of Doctor"], new_data[i]["Medicines"], new_data[i]["Date of Delivery"], new_data[i]["Pharmacist Name"]]
+    }
+
     return (
         <>
-            Hello 3
+           <Table headers={headers} data={new_data} /> 
+           <PopupButton title="Export as PDF"/>
         </>
     )
 }

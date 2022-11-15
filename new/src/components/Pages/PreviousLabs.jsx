@@ -1,6 +1,7 @@
 import React from "react";
 import Table from "../Table";
 import data from "./data/LabReportData";
+import PopupButton from "../PopupButton";
 
 export default function PreviousLabs() {
     let headers = Object.keys(data[0]);
@@ -18,10 +19,16 @@ export default function PreviousLabs() {
         }
         new_data[i] = [new_data[i]["ID"], new_data[i]["Prescription"], string]
     }
+    let dropdown = {
+      "action-1": "X-ray",
+      "action-2": "ECG",
+      "action-3": "Blood Test"
+    }
 
     return (
         <>
-           <Table headers={headers} data={new_data} /> 
+           <Table headers={headers} data={new_data} dropdown={dropdown} /> 
+           <PopupButton title="Export as PDF"/>
         </>
     )
 }

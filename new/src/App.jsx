@@ -9,7 +9,6 @@ import {
 import Log_OTP from "./components/Login/Log_OTP";
 
 export default function App() {
-
     return (
         <Router>
             <Routes>
