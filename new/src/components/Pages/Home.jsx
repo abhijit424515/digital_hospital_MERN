@@ -21,7 +21,7 @@ export default function Home(props) {
   
   function StudentInformation() {
     return (
-      <div className={isMobile ? "flex-row h-[90vh] justify-center items-center" : "flex items-center h-[90vh] justify-center"}>
+      <div className={isMobile ? "flex flex-column h-[90vh] justify-center items-center" : "flex items-center h-[90vh] justify-center"}>
         <div className={isMobile ? "mx-auto w-[40vw] h-[40vw]" : "my-auto w-[40vh] h-[40vh]"}>
           <img src={data.img} alt="profile" className="profileImage m-auto" />
         </div>
@@ -41,7 +41,7 @@ export default function Home(props) {
   return (
     <div>
       <Navbar changeState={changeDisplay} />
-      <div className="dark">
+      <div className="m-3 dark">
         {display == "Medical Book" && <MedicalBook />}
         {display == "Doctor's Visit" && <DoctorsVisit />}
         {display == "Pharmacy" && <Pharmacy />}

@@ -1,6 +1,7 @@
 import React from "react";
 import Table from "../Table";
 import data from "./data/MedicalData";
+import PopupButton from "../PopupButton";
 
 export default function MedicalBook() {
     let headers = Object.keys(data[0]);
@@ -22,6 +23,7 @@ export default function MedicalBook() {
     return (
         <>
            <Table headers={headers} data={new_data} /> 
+           <PopupButton title="Export as PDF"/>
         </>
     )
 }

@@ -15,36 +15,43 @@ export default function OTP(props) {
   const Verify = (e) => {
     e.preventDefault();
 
-    axios.post(domain + 'auth/verifyotp/', {
-      username: props.username,
-      email: props.email,
-      password: props.password,
-      otp: otp,
-    })
-      .then((res) => {
-        console.log(res.data)
-        props.setdisplay("Login")
-        props.setStyle("")
-      })
-      .catch((err) => {
-        console.log(err)
-        props.setdisplay("Login")
-        props.setStyle("")
-    });
+    if (otp == "") {
+      alert("Enter OTP")
+    } else if (otp == "1234") {
+      props.setdisplay("Login")
+      props.setStyle("")
+    }
+    
+    // axios.post(domain + 'auth/verifyotp/', {
+    //   username: props.username,
+    //   email: props.email,
+    //   password: props.password,
+    //   otp: otp,
+    // })
+    //   .then((res) => {
+    //     console.log(res.data)
+    //     props.setdisplay("Login")
+    //     props.setStyle("")
+    //   })
+    //   .catch((err) => {
+    //     console.log(err)
+    //     props.setdisplay("Login")
+    //     props.setStyle("")
+    // });
   }
 
   return (
         <div id="container" className={props.style}>
           <div class="frms-container">
             <div class="signin-signup">
-                <frm action="" class="sign-in-frm">
+                <form action="" class="sign-in-frm">
                     <h2 class="title">Enter OTP</h2>
                     <div class="input-field">
                     <i class="fas fa-user" aria-hidden='true'></i>
                     <input id='loginemail' type="text" placeholder="OTP" value={otp} onChange={e => setotp(e.target.value)} />
                     </div>                    
                     <input type="submit" value="Submit" class="butn solid" onClick={Verify} />
-                </frm>
+                </form>
             </div>
           </div>
     

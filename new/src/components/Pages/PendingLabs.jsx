@@ -18,10 +18,15 @@ export default function PendingLabs() {
         }
         new_data[i] = [new_data[i]["ID"], new_data[i]["Prescription"], string]
     }
+    let dropdown = {
+      "action-1": "X-ray",
+      "action-2": "ECG",
+      "action-3": "Blood Test"
+    }
 
     return (
         <>
-           <Table headers={headers} data={new_data} /> 
+           <Table headers={headers} data={new_data} dropdown={dropdown}/> 
         </>
     )
 }

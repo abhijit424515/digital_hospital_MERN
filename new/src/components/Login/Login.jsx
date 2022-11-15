@@ -20,36 +20,89 @@ export default function Login(props) {
   const Login = (e) => {
     e.preventDefault();
 
-    axios.post(domain + 'auth/login/', {
-      email: email,
-      password: password,
-    })
-      .then((res) => {
-        console.log(res.data)
-        navigate('/medical')
-      })
-      .catch((err) => {
-        console.log(err)
+    if (email == "") {
+      alert("Enter Email")
+    } else if (password == "") {
+      alert("Enter Password")
+    } else if (password.length < 8) {
+      alert("Password must be at least 8 characters")
+      return
+    } else if (email.length < 3) {
+      alert("Email must be at least 3 characters")
+      return
+    } else {
+      let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (re.test(email)) {
         navigate('/medical')     
-      });
+      }
+      else {
+        alert("Email is not in valid format")
+      }
+    }
+
+
+    // axios.post(domain + 'auth/login/', {
+    //   email: email,
+    //   password: password,
+    // })
+    //   .then((res) => {
+    //     console.log(res.data)
+    //     navigate('/medical')
+    //   })
+    //   .catch((err) => {
+    //     console.log(err)
+    //     navigate('/medical')     
+    //   });
+
   }
 
   const Signup = (e) => {
     e.preventDefault();
 
-    axios.post(domain + 'auth/getotp/', {
-        email: email,
-      })
-        .then((res) => {
-          console.log(res.data)
-          props.setdisplay("OTP")
-          props.setStyle("sign-up-mode")
-        })
-        .catch((err) => {
-          console.log(err)
-          props.setdisplay("OTP")
-          props.setStyle("")
-        });
+    if (username == "") {
+    alert("Enter Username")
+    } else if (email == "") {
+      alert("Enter Email")
+    } else if (password == "") {
+      alert("Enter Password")
+    } else if (password2 == "") {
+      alert("Enter Confirm Password")
+    } else if (password !== password2) {
+      alert("Passwords do not match")
+      return
+    } else if (password.length < 8) {
+      alert("Password must be at least 8 characters")
+      return
+    } else if (username.length < 3) {
+      alert("Username must be at least 3 characters")
+      return
+    } else if (email.length < 3) {
+      alert("Email must be at least 3 characters")
+      return
+    } else {
+      let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (re.test(email)) {
+        props.setdisplay("OTP")
+        props.setStyle("")
+      }
+      else {
+        alert("Email is not in valid format")
+      }
+    }
+
+    // axios.post(domain + 'auth/getotp/', {
+    //     email: email,
+    //   })
+    //     .then((res) => {
+    //       console.log(res.data)
+    //       props.setdisplay("OTP")
+    //       props.setStyle("sign-up-mode")
+    //     })
+    //     .catch((err) => {
+    //       console.log(err)
+    //       props.setdisplay("OTP")
+    //       props.setStyle("")
+    //     });
 
   }
 
