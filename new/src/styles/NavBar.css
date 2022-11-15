@@ -1,0 +1,21 @@
+.navigationitem {
+   font-size: 2.5vh !important;
+}
+
+@media only screen and (max-width: 992px) {
+   .navcontainer {
+      height: calc(100vh - 50px) !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+   .navbar-toggler {
+      margin-left: 10px !important;
+   }  
+}
+
+.navigationitem:hover {
+   color: rgb(23, 137, 230) !important;
+   border-bottom: 1px solid rgb(23, 137, 230);
+}
